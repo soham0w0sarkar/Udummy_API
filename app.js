@@ -24,6 +24,6 @@ app.use(cookieParser());
 app.use("/api/v1", course);
 app.use("/api/v1", user);
 
-export default app;
-
 app.use(errorMiddleware);
+
+export default app;
