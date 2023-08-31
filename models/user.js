@@ -30,7 +30,7 @@ const UserSchema = new mongoose.Schema({
     enum: ["user", "admin"],
     default: "user",
   },
-  // Subscription id, status
+  // Subscription id, success
   subcription: {
     id: String,
     status: String,

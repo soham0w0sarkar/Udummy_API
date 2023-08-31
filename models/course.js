@@ -25,7 +25,7 @@ const CourseSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
-      vedio: {
+      video: {
         public_id: {
           type: String,
           required: true,
