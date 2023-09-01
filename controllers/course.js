@@ -6,7 +6,19 @@ import ErrorHandler from "../utils/errorHandler.js";
 import getDataUri from "../middlewares/dataUri.js";
 
 export const getAllCourses = catchAsyncError(async (req, res, next) => {
-  const courses = await Course.find();
+  const keyword = req.query.keyword || "";
+  const category = req.query.category || "";
+
+  const courses = await Course.find({
+    title: {
+      $regex: keyword,
+      options: "i",
+    },
+    category: {
+      $regex: category,
+      options: "i",
+    },
+  }).select("-lectures");
   res.status(200).json({
     success: true,
     courses,
