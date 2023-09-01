@@ -8,6 +8,9 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
+  "engines": {
+    "node": "16.13.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
